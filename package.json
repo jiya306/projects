@@ -1,0 +1,12 @@
+{
+  "name": "salonflow-unified",
+  "version": "1.0.0",
+  "private": true,
+  "description": "SalonFlow Full-Stack Unified Application",
+  "scripts": {
+    "build:client": "cd client && npm install && npm run build",
+    "build:server": "cd server && npm install && npm run build",
+    "build": "npm run build:client && npm run build:server",
+    "start": "node server/dist/server.js"
+  }
+}

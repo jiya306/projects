@@ -1,0 +1,13 @@
+services:
+  # Unified Full-Stack Service (Frontend + Backend on 1 URL)
+  - type: web
+    name: salonflow-app
+    env: node
+    plan: free
+    buildCommand: cd client && pnpm install && pnpm build && cd ../server && pnpm install && pnpm build
+    startCommand: node server/dist/server.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
